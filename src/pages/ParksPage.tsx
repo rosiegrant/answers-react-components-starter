@@ -8,6 +8,7 @@ export default function ParksPage() {
     const answersActions = useAnswersActions();
     //set up vertical 
     useEffect(() => {
+        //clear any existing filters
         const stateToClear = {
             filters: {},
             universal: {},
@@ -17,7 +18,11 @@ export default function ParksPage() {
             ...answersActions.state,
             ...stateToClear
         });
+        //update the vertical
         answersActions.setVertical('locations');
+        //determine number per page
+        answersActions.setVerticalLimit(8);
+        //fire an empty query on page load
         const executeQuery = async () => {
             answersActions.executeVerticalQuery();
         };
