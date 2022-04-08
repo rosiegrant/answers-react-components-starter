@@ -12,7 +12,7 @@
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
     "@yext/answers-headless-react": "^1.1.0-beta.10",
-    "@yext/answers-react-components": "^0.1.1-beta.3",
+    "@yext/answers-react-components": "^0.1.1-beta.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.3.0",
