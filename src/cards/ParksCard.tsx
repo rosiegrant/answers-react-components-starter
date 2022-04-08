@@ -155,7 +155,7 @@ export function ParksCard(props: ParksCardProps): JSX.Element {
         <div className="flex flex-col justify-start rounded-lg mb-4 shadow-lg bg-white hover:shadow-xl hover:cursor-pointer">
             {(data.photoGallery && data.photoGallery[0] && data.photoGallery[0].image.url) &&
                 <div>
-                    <img className="rounded-t-lg" style={{ width: "-webkit-fill-available" }} src={data.photoGallery[0].image.url}></img>
+                    <img className="rounded-t-lg" style={{ width: "-webkit-fill-available" }} src={data.photoGallery[0].image.url} alt={`"image of" ${data.title}`}></img>
                 </div>
             }
             <div className={cssClasses.header}>
