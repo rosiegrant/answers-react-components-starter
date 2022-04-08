@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App p-4">
       <AnswersHeadlessProvider
-        apiKey='06812f79aa06d16a1c6b83d76b5b4350'
+        apiKey='[[REPLACE ME API KEY]]'
         experienceKey='national-parks'
         locale='en'
       >
