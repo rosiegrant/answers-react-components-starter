@@ -37,7 +37,7 @@ export default function ParksPage() {
                         }
                         return (
                             <div key={f.fieldId} className='md:w-40 mr-10'>
-                                <Filters.FilterGroup>
+                                <Filters.FilterGroup fieldId={f.fieldId}>
                                     <Filters.CollapsibleLabel label={f.displayName} />
                                     <Filters.CollapsibleSection>
                                         <Filters.SearchInput />
@@ -45,7 +45,6 @@ export default function ParksPage() {
                                             <Filters.CheckboxOption
                                                 key={o.displayName}
                                                 value={o.value}
-                                                fieldId={f.fieldId}
                                             />
                                         )}
                                     </Filters.CollapsibleSection>
