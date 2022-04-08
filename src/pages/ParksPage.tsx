@@ -1,6 +1,7 @@
 import { useAnswersActions, useAnswersState } from '@yext/answers-headless-react';
 import { SearchBar, VerticalResults, StandardCard, Filters, AppliedFilters } from '@yext/answers-react-components';
 import { useEffect } from 'react';
+import { ParksCard } from '../cards/ParksCard';
 
 export default function ParksPage() {
 
@@ -59,7 +60,13 @@ export default function ParksPage() {
                         <div>no results darn </div>
                     }
                     <VerticalResults
-                        CardComponent={StandardCard}
+                        customCssClasses={{ results: "text-left grid grid-cols-4 gap-6 " }}
+                        CardComponent={
+                            ({ result }) => <ParksCard
+                                result={result}
+                                showFeedbackButtons={true}
+                            />
+                        }
                         displayAllOnNoResults={false}
                     />
                 </div>
